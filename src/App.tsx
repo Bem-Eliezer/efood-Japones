@@ -1,25 +1,35 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+import Header from './components/Header'
+import { GlobalCss } from './styles'
+import Home from './pages/Home'
+
+import Rodape from './components/Rodape'
+import HeaderPg2 from './components/HeaderPg2'
+import BannerPg2 from './components/BannerPg2'
+import ProductListPg2 from './ProductListPg2'
+
+const Rotas = () => (
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/HeaderPg2" element={<HeaderPg2 />} />
+  </Routes>
+)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <GlobalCss />
+        <Header />
+        <Rotas />
+        <Rodape />
+        <HeaderPg2 />
+        <BannerPg2 />
+        <ProductListPg2 />
+        <Rodape />
+      </BrowserRouter>
+    </>
   )
 }
 
