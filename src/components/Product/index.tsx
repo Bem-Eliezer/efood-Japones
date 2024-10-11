@@ -41,7 +41,7 @@ const Product = ({ title, descricao, saibaMais, image, infos }: Props) => (
     </TituloENota>
     <Descricao>{descricao}</Descricao>
     <MaisInformacoes>
-      <Link to="">
+      <Link to="/HeaderPg2">
         <Tag size="small">{saibaMais}</Tag>
       </Link>
     </MaisInformacoes>
