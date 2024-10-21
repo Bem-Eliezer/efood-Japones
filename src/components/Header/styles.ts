@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import HeaderPage2 from '../HeaderPg2'
 
 export const Imagem = styled.div`
   width: 100%;
@@ -7,6 +8,7 @@ export const Imagem = styled.div`
   background-size: cover;
   margin-top: 24px;
 `
+
 export const Logo = styled.div`
   width: 125px;
   height: 58px;
