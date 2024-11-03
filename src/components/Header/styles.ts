@@ -6,7 +6,6 @@ export const Imagem = styled.div`
   height: 424px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 24px;
 `
 
 export const Logo = styled.div`

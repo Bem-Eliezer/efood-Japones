@@ -18,7 +18,7 @@ export const GlobalCss = createGlobalStyle`
   body {
   background-color: ${cores.creme};
   color: ${cores.vermelho};
-  padding-bottom: 24px;
+
   }
 
   .container{

@@ -8,6 +8,7 @@ import Rodape from './components/Rodape'
 import HeaderPg2 from './components/HeaderPg2'
 import BannerPg2 from './components/BannerPg2'
 import ProductListPg2 from './ProductListPg2'
+import Product from './pages/Product'
 
 const Rotas = () => (
   <Routes>
@@ -30,6 +31,7 @@ const Rotas = () => (
         </>
       }
     />
+    <Route path="/product/:id" element={<Product />} />
   </Routes>
 )
 
