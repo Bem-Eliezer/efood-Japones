@@ -17,7 +17,7 @@ import {
 type Props = {
   title: string
   descricao: string
-  saibaMais: string
+  saibaMais?: string
   image: string
   infos: string[]
 }
@@ -31,7 +31,7 @@ const Product = ({ title, descricao, saibaMais, image, infos }: Props) => (
       ))}
     </Infos>
     <TituloENota>
-      <Titulo>Nome do prato</Titulo>
+      <Titulo>{title}</Titulo>
       <Nota>
         4.9
         <Estrela>
@@ -42,7 +42,9 @@ const Product = ({ title, descricao, saibaMais, image, infos }: Props) => (
     <Descricao>{descricao}</Descricao>
     <MaisInformacoes>
       <Link to="/HeaderPg2">
-        <Tag size="small">{saibaMais}</Tag>
+        <Tag size="small">
+          <span>SaibaMais{saibaMais}</span>
+        </Tag>
       </Link>
     </MaisInformacoes>
   </Card>

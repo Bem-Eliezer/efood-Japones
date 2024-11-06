@@ -12,7 +12,7 @@ const ProductList = ({ pratos }: Props) => {
   const getPratoTags = (prato: Pratos) => {
     const tags = []
 
-    if (prato.cardapio) {
+    if (prato.tipo) {
       tags.push(prato.tipo)
     }
 
@@ -26,11 +26,11 @@ const ProductList = ({ pratos }: Props) => {
           {pratos.map((prato) => (
             <Product
               key={prato.id}
-              descricao={prato.descricao}
               image={prato.capa}
               title={prato.titulo}
-              saibaMais={prato.titulo}
               infos={getPratoTags(prato)}
+              descricao={prato.descricao}
+              saibaMais={prato.cardapio.nome}
             />
           ))}
         </List>
