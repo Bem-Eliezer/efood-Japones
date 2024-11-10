@@ -1,7 +1,5 @@
 import ProductList from '../../ProductsList'
 
-import macarrao from '../../assets/images/maccarrao.png'
-import suchi from '../../assets/images/suchi.png'
 import { useEffect, useState } from 'react'
 
 export type Pratos = {
@@ -22,7 +20,7 @@ export type Pratos = {
   }
 }
 
-const Home = () => {
+export const Home = () => {
   const [pratosDoDia, setPratosDoDIa] = useState<Pratos[]>([])
 
   useEffect(() => {

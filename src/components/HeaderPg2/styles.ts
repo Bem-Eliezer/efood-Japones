@@ -20,6 +20,7 @@ export const Restaurantes = styled.p`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 `
 
 export const Carrinho = styled.p`
