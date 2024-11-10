@@ -33,7 +33,7 @@ const Product = ({ title, descricao, saibaMais, image, infos, id }: Props) => {
   useEffect(() => {
     fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
       .then((res) => res.json())
-      .then((res) => setPratosDoDIa(res))
+      .then((res) => setPrato(res))
   }, [id])
 
   if (!prato) {
@@ -41,7 +41,7 @@ const Product = ({ title, descricao, saibaMais, image, infos, id }: Props) => {
   }
 
   return (
-    <Card to={`/produc/${iD}`}>
+    <Card to={`/product/${id}`}>
       <img src={prato.capa} alt={title} />
       <Infos>
         {infos.map((info) => (
@@ -70,6 +70,3 @@ const Product = ({ title, descricao, saibaMais, image, infos, id }: Props) => {
 }
 
 export default Product
-function setPratosDoDIa(res: any): any {
-  throw new Error('Function not implemented.')
-}
